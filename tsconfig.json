@@ -3,7 +3,7 @@
   "compilerOptions": {
     "module": "es6",
     "rootDir": "./src",
-    "outDir": "./dist/module"
+    "outDir": "./dist"
   },
 
   "include": [

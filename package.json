@@ -1,7 +1,7 @@
 {
   "name": "icetea-id-vital",
-  "version": "1.0.1",
-  "main": "dist/native-sdk.js",
+  "version": "1.0.2",
+  "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
     "start": "yarn ts-node src/index.ts",
