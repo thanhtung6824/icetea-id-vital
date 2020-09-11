@@ -4,8 +4,8 @@ import { WebView } from 'react-native-webview';
 import React, { useState, useCallback } from 'react';
 
 export class NativeIframe extends Iframe {
-    protected iframe: WebView
-    protected view
+    protected iframe: WebView | null = null
+    protected view: any
     protected closeIframe(): void {
         if (this.view) {
             this.view.closeIframe();
@@ -25,7 +25,7 @@ export class NativeIframe extends Iframe {
         }
     }
 
-    protected onMessage(event) {
+    protected onMessage(event: any) {
         if (!event.nativeEvent && event.nativeEvent.url !== this.endpoint) {
             return;
         }

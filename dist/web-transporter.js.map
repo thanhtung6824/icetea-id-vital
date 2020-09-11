@@ -1,1 +1,0 @@
-{"version":3,"file":"web-transporter.js","sourceRoot":"","sources":["../src/web-transporter.ts"],"names":[],"mappings":";;AAAA,wDAAqD;AAErD,MAAa,cAAe,SAAQ,yBAAW;IACjC,QAAQ;QACd,MAAM,CAAC,gBAAgB,CAAC,SAAS,EAAE,CAAC,KAAmB,EAAE,EAAE;YACvD,IAAI,KAAK,CAAC,MAAM,KAAK,IAAI,CAAC,QAAQ,EAAE;gBAChC,OAAO;aACV;QACL,CAAC,CAAC,CAAC;IACP,CAAC;CACJ;AARD,wCAQC"}

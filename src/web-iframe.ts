@@ -1,12 +1,12 @@
 import { Iframe } from './provider/iframe';
 import { Observable, BehaviorSubject } from 'rxjs';
 
-const isIframeExist = (eleId) => {
+const isIframeExist = (eleId: string) => {
     return !!document.getElementById(eleId);
 };
 
 export class WebIframe extends Iframe {
-    private iframe: Observable<HTMLIFrameElement>
+    private iframe: Observable<HTMLIFrameElement> | null = null;
 
     protected createIframe(): Observable<HTMLIFrameElement> {
         return new Observable((subscriber) => {
@@ -29,7 +29,7 @@ export class WebIframe extends Iframe {
 
     protected closeIframe(): void {
         const iframe = document.getElementById(this.sdkId);
-        iframe.remove();
+        iframe?.remove();
     }
 
     protected openIframe(): Observable<HTMLIFrameElement> {
@@ -43,8 +43,8 @@ export class WebIframe extends Iframe {
         return this.createIframe();
     }
 
-    public postMessage(payload): void {
+    public postMessage(payload: any): void {
         this.getIframe()
-            .subscribe(iframe => iframe.contentWindow.postMessage(payload, this.endpoint));
+            .subscribe(iframe => iframe?.contentWindow?.postMessage(payload, this.endpoint));
     }
 }

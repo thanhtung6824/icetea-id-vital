@@ -30,14 +30,14 @@ export class SdkBase {
             this._transport = new SdkConfiguration.Transporter(this.endpoint);
         }
 
-        return this._transport;
+        return <Transporter>this._transport;
     }
 
     public get iframe(): Iframe {
         if (!this._iframe) {
             this._iframe = new SdkConfiguration.Iframe(this.endpoint, this.sdkId);
         }
-        return this._iframe;
+        return <Iframe>this._iframe;
     }
 }
 

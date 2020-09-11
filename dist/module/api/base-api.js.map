@@ -1,0 +1,1 @@
+{"version":3,"file":"base-api.js","sourceRoot":"","sources":["../../../src/api/base-api.ts"],"names":[],"mappings":"AAEA;IACI,iBAA+B,QAAiB;QAAjB,aAAQ,GAAR,QAAQ,CAAS;IAChD,CAAC;IAED,sBAAc,2BAAM;aAApB;YACI,OAAO,IAAI,CAAC,QAAQ,CAAC,MAAM,CAAC;QAChC,CAAC;;;OAAA;IAED,sBAAc,gCAAW;aAAzB;YACI,OAAO,IAAI,CAAC,QAAQ,CAAC,WAAW,CAAC;QACrC,CAAC;;;OAAA;IAEL,cAAC;AAAD,CAAC,AAZD,IAYC"}

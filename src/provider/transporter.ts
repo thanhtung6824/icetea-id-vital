@@ -8,12 +8,13 @@ export abstract class Transporter {
     }
 
     protected abstract boostrap () : void
-
+    // @ts-ignore
     public post(iframe, requestType, payload): Observable<any> {
         const idMessage = randomId();
         iframe.postMessage(queryBuilder(idMessage, requestType, payload));
         return fromEvent(window, 'message')
             .pipe(
+                // @ts-ignore
                 filter((messageEvent: MessageEvent) => {
                     const messageData = JSON.parse(messageEvent.data);
                     return messageData.id === idMessage;

@@ -1,5 +1,5 @@
 export class ExceptionHandler extends Error {
-    constructor(code, message: string) {
+    constructor(code: any, message: string) {
         super(`IceteaID Error: [${code}] ${message}`);
 
         // Set the prototype explicitly.
