@@ -3,12 +3,19 @@ const path = require('path');
 module.exports = {
     mode: 'production',
     entry: './src/index.ts',
+    externals: {
+        'react-native': true,
+    },
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
-                use: 'ts-loader',
-                exclude: /node_modules/,
+                test: /\.(ts|tsx)?$/,
+                include: path.resolve(__dirname, 'src'),
+                use: [
+                    {
+                        loader: 'babel-loader',
+                    },
+                ]
             },
         ],
     },

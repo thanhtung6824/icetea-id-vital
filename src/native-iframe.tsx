@@ -1,6 +1,5 @@
 import { Iframe } from './provider/iframe';
-import { Observable, BehaviorSubject } from 'rxjs';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import { WebView } from 'react-native-webview';
 import React, { useState, useCallback } from 'react';
 
