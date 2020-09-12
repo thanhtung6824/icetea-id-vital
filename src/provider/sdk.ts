@@ -1,5 +1,4 @@
 import { missingApiKeyError } from './exception-handler';
-import { urlBuilder } from '../helpers';
 import { UserApi } from '../api/user';
 import { Iframe } from './iframe';
 import { Transporter } from './transporter';
@@ -16,7 +15,7 @@ export class SdkBase {
         if (!apiKey) {
             throw missingApiKeyError();
         }
-        this.endpoint = urlBuilder(SdkConfiguration.baseUrl).origin;
+        this.endpoint = SdkConfiguration.baseUrl;
         this.user = new UserApi(this);
         this.sdkId = btoa(JSON.stringify({
             apiKey: apiKey,

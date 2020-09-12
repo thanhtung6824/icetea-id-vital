@@ -21,7 +21,7 @@ export class NativeIframe extends Iframe {
     protected postMessage(payload: string): void {
         if (this.iframe) {
             this.view.openIframe();
-            this.iframe.postMessage(payload);
+            (this.iframe as any).postMessage(payload);
         }
     }
 

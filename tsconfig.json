@@ -1,9 +1,18 @@
 {
-  "extends": "./tsconfig.settings.json",
   "compilerOptions": {
-    "module": "es6",
     "rootDir": "./src",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "lib": ["es2018", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "strict": true,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "declaration": true,
+    "skipLibCheck": true
   },
 
   "include": [
